@@ -25,6 +25,5 @@ module.exports = (robot) ->
           msg.send '"' + info.query.normalized[0].from + '"' + ' は見つからなかったよ！'
           return
         Object.keys(info.query.pages).forEach (key) ->
-          console.log info.query.pages[key]
           msg.send info.query.pages[key].extract + '\n http://ja.wikipedia.org/wiki/' + info.query.pages[key].title
 
