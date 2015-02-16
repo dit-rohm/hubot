@@ -17,6 +17,7 @@ module.exports = (robot) ->
         titles: word
         exchars: 130
         explaintext: 1
+        redirects: 1
         prop: 'extracts'
       })
       .get() (err, res, body) ->
