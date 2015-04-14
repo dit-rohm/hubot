@@ -2,13 +2,13 @@
 #   メンバーの１人をランダムに出力
 #
 # Commands:
-#   hubot 選んで
+#   hubot choose
 #
 # Author:
-#  chikam 
+#  chikam
 
 module.exports = (robot) ->
-	robot.respond /選んで/i, (msg) ->
-		member = msg.random ["ちい", "りょうぽん", "けいちゃん", "いいのっく", "たむりん"]
-		msg.send "#{member}を選んだよ！" 
-	
+	robot.respond /choose/i, (msg) ->
+		member = msg.random ["ちい", "りょうぽん", "けいちゃん", "いいのっく", "たむりん", "ともくん", "うっちー"]
+		msg.send "#{member}を選んだよ！"
+
