@@ -1,3 +1,12 @@
+# Description:
+#   芸剤の時刻を美人時計で教えてくれます
+#
+# Commands:
+#   tokei - 時刻を美人時計で教えてくれます
+#
+# Auther:
+#   chikam
+
 require('date-utils');
 
 module.exports = (robot) ->
