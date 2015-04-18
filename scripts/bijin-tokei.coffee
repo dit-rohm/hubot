@@ -13,5 +13,5 @@ module.exports = (robot) ->
   robot.hear /tokei/i, (msg) ->
     dt = new Date();
     formatted = dt.toFormat("HH24MI");
-    img_url = 'http://www.bijint.com/jp/tokei_images/TIME.jpg'.replace('TIME', formatted)
+    img_url = 'http://www.bijint.com/assets/pict/jp/pc/TIME.jpg'.replace('TIME', formatted)
     msg.send(img_url)
