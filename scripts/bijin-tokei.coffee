@@ -13,5 +13,8 @@ module.exports = (robot) ->
   robot.hear /tokei/i, (msg) ->
     dt = new Date();
     formatted = dt.toFormat("HH24MI");
+    prefectures = ['chiba', 'fukuoka', 'kanazawa', 'aomori', 'iwate', 'niigata', 'shizuoka', 'ibaraki', 'nagoya', 'hokkaido', 'kanagawa', 'tokyo', 'saitama', 'okinawa', 'nara', 'saga', 'hiroshima', 'miyazaki', 'akita', 'osaka', 'nagasaki', 'nagano', 'kyoto', 'fukui', 'gunma', 'yamanashi', 'yamaguchi', 'kumamoto', 'okayama', 'tottori', 'tochigi', 'kagawa', 'kobe', 'sendai']
+    num = Math.floor(Math.random() * prefectures.length + 1)
     img_url = 'http://www.bijint.com/assets/pict/jp/pc/TIME.jpg'.replace('TIME', formatted)
+    img_url = img_url.replace('jp', prefectures[num])
     msg.send(img_url)
