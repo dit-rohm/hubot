@@ -9,6 +9,6 @@
 
 module.exports = (robot) ->
 	robot.respond /choose/i, (msg) ->
-		member = msg.random ["ちい", "りょうぽん", "けいちゃん", "いいのっく", "たむりん", "ともくん", "うっちー", "くにちゃん", "はやP", "ひょうが" , "ともき"]
-		msg.send "#{member}を選んだよ！"
-
+		robot.http("http://apps.dit-rohm.com/api/victim").get() (err, res, body) ->
+			member = JSON.parse(body)['username']
+			msg.send "#{member}を選んだよ！"
