@@ -9,6 +9,6 @@
 
 module.exports = (robot) ->
 	robot.respond /choose/i, (msg) ->
-		robot.http("http://apps.dit-rohm.com/api/victim").get() (err, res, body) ->
+		robot.http("https://apps.dit-rohm.com/api/victim").get() (err, res, body) ->
 			member = JSON.parse(body)['username']
 			msg.send "#{member}を選んだよ！"
